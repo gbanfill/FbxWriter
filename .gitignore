@@ -229,3 +229,4 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+/.vs/FbxWriter/v15/Server/sqlite3
