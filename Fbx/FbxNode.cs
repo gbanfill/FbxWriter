@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace Fbx
 {
 	/// <summary>
 	/// Represents a node in an FBX file
 	/// </summary>
+	[DebuggerDisplay("FbxNode: {Name} - {Value}. Children {Nodes.Count}")]
 	public class FbxNode : FbxNodeList
 	{
 		/// <summary>
