@@ -21,9 +21,19 @@ namespace Fbx
 				throw new ArgumentNullException(nameof(path));
 			using (var stream = new FileStream(path, FileMode.Open))
 			{
-				var reader = new FbxBinaryReader(stream);
-				return reader.Read();
+				return ReadBinary(stream);
 			}
+		}
+
+		/// <summary>
+		/// Reads a binary FBX file
+		/// </summary>
+		/// <param name="fbxStream"></param>
+		/// <returns>The top level document node</returns>
+		public static FbxDocument ReadBinary(Stream fbxStream)
+		{
+			var reader = new FbxBinaryReader(fbxStream);
+			return reader.Read();
 		}
 
 		/// <summary>
